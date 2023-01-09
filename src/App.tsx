@@ -41,7 +41,7 @@ function App() {
 
   return (
     <div className="App">
-      {personas.map(persona => <div>
+      {personas.map((persona) => <div key={persona.id}>
         <p>{persona.id} - <strong>{persona.nombre}</strong> - Salário de US$ {persona.salario} - {persona.empleado ? 'Es empleado' : 'No es funcionario'} {persona.empleado && persona.departamento && `del departamento de ${persona.departamento}`}</p>
       </div>)}
     </div>
